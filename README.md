@@ -1,16 +1,33 @@
-# refactor-this
-A terribly written Web API project that can be used as a test for potential C# applicants.  It's terrible on purpose, so that you can show us how we can improve it.
 
-## Getting started for applicants
-
-Fork this repository and make your changes to this project to make it better.  Simple.  There are no rules, except that we know that this project is very badly written, on purpose.  So, your job, should you choose to accept it, is to make the project better in any way you see fit.
 
 To set up the project:
 
-* Visual Studio 2015 is preferred.
-* Open in VS.
+* Open project in VS.
 * Restore nuget packages and rebuild.
 * Run the project.
+
+
+Refactor product API project using with following changes -
+1. Configured Swagger UI to make requests-
+  * Run the project.- once up just append /swagger it will open swagger UI eg. http://localhost:58123/swagger/ui/index#/Products
+2. Used Entity Framework to connect with database and perform all CRUD operations
+3. Used dependency injection using Unity
+4. Created dto and model separately and used Automapper for mapping those models
+5. Added TDD unit test cases for Controller and ProductServices
+   * Go to menu Test -> Text Explorer and run test cases
+6. Read connection string from Web. config file using dbcontext.
+
+
+We could integrate below things -
+
+1. Apply Authentication and Authorization using JWT token
+2. We can handle application logging using Ilogger 
+3. We can add middleware to handle all errors
+4. We can add BDD api automation testing framework to cover all e2e and functional test.
+
+
+## Instructions
+
 
 There should be these endpoints:
 
